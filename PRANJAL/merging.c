@@ -1,0 +1,61 @@
+#include<stdio.h>
+int main()
+{
+    int a[3],b[2],c[5],i,j,k,m;
+    printf("enter elements of A");
+    for(i=0;i<3;i++)
+    {
+        scanf("%i",&a[i]);
+    }
+     printf("enter elements of B");
+    for(i=0;i<2;i++)
+    {
+        scanf("%i",&b[i]);
+    }
+    printf("\nA:");
+    for(i=0;i<3;i++)
+    {
+        printf("%i\t",a[i]);
+    }
+    printf("\nB:");
+    for(i=0;i<2;i++)
+    {
+        printf("%i\t",b[i]);
+    }
+    i=j=k=0;
+   while(i<3&&j<2)
+   {
+       if(a[i]>b[j])
+       {
+           c[k]=b[j];
+           j++;
+       }
+       else
+       {
+           c[k]=a[i];
+           i++;
+       }
+       k++;
+   }
+   if(j>=2)
+   {
+       for(m=k;m<5;m++)
+       {
+           c[m]=a[i];
+           i++;
+       }
+   }
+   else
+   {
+     for(m=k;m<5;m++)
+       {
+           c[m]=b[i];
+           j++;
+       }
+   }
+   printf("merged array is\n");
+   for(i=0;i<5;i++)
+   {
+       printf("%i\t",c[i]);
+   }
+}
